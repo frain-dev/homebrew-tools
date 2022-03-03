@@ -5,21 +5,21 @@
 class Convoy < Formula
   desc "A Cloud native webhook service"
   homepage "https://getconvoy.io/"
-  version "0.4.12"
+  version "0.4.13"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/frain-dev/convoy/releases/download/v0.4.12/convoy_0.4.12_darwin_amd64.tar.gz"
-      sha256 "008ffb4896cab5539ad549d700dfd7227682214440c7cd2d4f4093b05eb9c791"
+      url "https://github.com/frain-dev/convoy/releases/download/v0.4.13/convoy_0.4.13_darwin_amd64.tar.gz"
+      sha256 "000bec1a9bfb7d4bab790df5eb8450245dfc09558c2390a33fc1994c280454fa"
 
       def install
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/frain-dev/convoy/releases/download/v0.4.12/convoy_0.4.12_darwin_arm64.tar.gz"
-      sha256 "3d46e761e700282a79ec1c1b55f350c017c4552a9c1c85a7c7a9f0dc3bd5d190"
+      url "https://github.com/frain-dev/convoy/releases/download/v0.4.13/convoy_0.4.13_darwin_arm64.tar.gz"
+      sha256 "4cdd8fb4ce1e37901fc0902b9728fd9e22926723d96ea440722317ca5896a1e7"
 
       def install
         bin.install "convoy"
@@ -29,16 +29,16 @@ class Convoy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/frain-dev/convoy/releases/download/v0.4.12/convoy_0.4.12_linux_amd64.tar.gz"
-      sha256 "d19c47b93a4dbade5e49f5f7205d22ca9870130900b00bb512581f97f15c58c4"
+      url "https://github.com/frain-dev/convoy/releases/download/v0.4.13/convoy_0.4.13_linux_amd64.tar.gz"
+      sha256 "6df1e1bb5e648f4a2bd02d721fb77785ae1228c9384093712d7d46dd68cb2ed9"
 
       def install
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/frain-dev/convoy/releases/download/v0.4.12/convoy_0.4.12_linux_arm64.tar.gz"
-      sha256 "5545cfe110cdd2d4e6de382146fbc6ab8e2e34578bf8d40657e11cb97c4e488c"
+      url "https://github.com/frain-dev/convoy/releases/download/v0.4.13/convoy_0.4.13_linux_arm64.tar.gz"
+      sha256 "4e73534bb8d4d2e13656c73868821021f2c91324b13a45b35fe65d93f7c1bee3"
 
       def install
         bin.install "convoy"
