@@ -5,21 +5,21 @@
 class Convoy < Formula
   desc "A fast & secure open source webhooks service"
   homepage "https://getconvoy.io/"
-  version "0.6.6"
+  version "0.6.7"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.6/convoy_0.6.6_darwin_arm64.tar.gz"
-      sha256 "59d5d2a94dd2b8a59d169950879812d6c48182fb9fd4522dfb402a7b7fb26711"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.7/convoy_0.6.7_darwin_arm64.tar.gz"
+      sha256 "f83aead6c0e511b01d98ea274b38c362fea29e86ed970ee27cf326568eb895f2"
 
       def install
         bin.install "convoy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.6/convoy_0.6.6_darwin_amd64.tar.gz"
-      sha256 "30bd75eef97876ccdac9fe9a4af996d8693974fbfc2f671dcc49e8b8e59cf1c5"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.7/convoy_0.6.7_darwin_amd64.tar.gz"
+      sha256 "b0ac2dfc2ad13a8d19d7e3b3d2339410480837d37b219d40b61e15acba26b425"
 
       def install
         bin.install "convoy"
@@ -29,16 +29,16 @@ class Convoy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.6/convoy_0.6.6_linux_arm64.tar.gz"
-      sha256 "ba45e66752633220052613a14a59a0826aac69a0cc3a41160be95c5e5d8e7075"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.7/convoy_0.6.7_linux_arm64.tar.gz"
+      sha256 "68a72e123685a2e128cda438ebc5a9c3d8ea7f9c8b0ae8ece88715375aed989e"
 
       def install
         bin.install "convoy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.6/convoy_0.6.6_linux_amd64.tar.gz"
-      sha256 "88afd6b00ae296960836ba9156c0e5d42adb5cca8ea3b0306892396c8345fe64"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.6.7/convoy_0.6.7_linux_amd64.tar.gz"
+      sha256 "fb4566e617c6edae2c8319b80360558d7b465f74f60c8cc3419cc4cafa77a48a"
 
       def install
         bin.install "convoy"
