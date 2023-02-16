@@ -5,21 +5,21 @@
 class ConvoyCli < Formula
   desc "A tool for debugging convoy webhook events locally"
   homepage "https://getconvoy.io/"
-  version "0.0.4"
+  version "0.1.0"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.0.4/convoy-cli_0.0.4_darwin_arm64.tar.gz"
-      sha256 "7b74519163d001615d0cfee83161a9b31d28cea58a0359f7268e952ab3e0872d"
+      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.1.0/convoy-cli_0.1.0_darwin_arm64.tar.gz"
+      sha256 "51c2ffbacf8ffaf6a41c65e034349c18417b5ea68ea5f49a3b47fe1a9a3c6d40"
 
       def install
         bin.install "convoy-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.0.4/convoy-cli_0.0.4_darwin_amd64.tar.gz"
-      sha256 "f2f724d4cb91e0a4642845122471e3b501b7ee81ce2e242fc97ba36644b8c853"
+      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.1.0/convoy-cli_0.1.0_darwin_amd64.tar.gz"
+      sha256 "4d03bf15ffa0229c3303c2e78bd9cf9727f6424c4d81914efe3e87c6f8d7a15e"
 
       def install
         bin.install "convoy-cli"
@@ -28,17 +28,17 @@ class ConvoyCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.0.4/convoy-cli_0.0.4_linux_amd64.tar.gz"
-      sha256 "5f9bf093e2405e29762622e17cf15eeb8e40a4f0b6e13169f12d00c237001805"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.1.0/convoy-cli_0.1.0_linux_arm64.tar.gz"
+      sha256 "0db6951529d4646d95c074779be52fa90418192f546ee0f1832a3d99be893e23"
 
       def install
         bin.install "convoy-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.0.4/convoy-cli_0.0.4_linux_arm64.tar.gz"
-      sha256 "843c3ad4719561c8608eb2223c51b6227fa9f4341e73072942bee0294f0a988d"
+    if Hardware::CPU.intel?
+      url "https://dl.cloudsmith.io/public/convoy/convoy-cli/raw/versions/0.1.0/convoy-cli_0.1.0_linux_amd64.tar.gz"
+      sha256 "292dcf280b7f22873db1952407b528d43a0aee59cb3f7d5fce0cdfdfcceca5d9"
 
       def install
         bin.install "convoy-cli"
