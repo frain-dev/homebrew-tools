@@ -11,7 +11,7 @@ class Convoy < Formula
   on_macos do
     on_intel do
       url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.0.1/convoy_0.0.1_darwin_amd64.tar.gz"
-      sha256 "92db6744f8120aa874423d80057c0e7c0e31406c4090cf86c67c7c4b56fc7c33"
+      sha256 "8fe2565c1d987545022babe7c8ced95739e26238940e357f107ea19815189890"
 
       def install
         bin.install "convoy"
@@ -19,7 +19,7 @@ class Convoy < Formula
     end
     on_arm do
       url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.0.1/convoy_0.0.1_darwin_arm64.tar.gz"
-      sha256 "f87b58f214b6dbef99fe618a0636010b4a5709250ef45d55cebe3a4a3d9cffef"
+      sha256 "00ecf71d7fb00bb781bfa2c79fd783b834c7cbd3084f87a0f50e6d05c588d33f"
 
       def install
         bin.install "convoy"
@@ -31,7 +31,7 @@ class Convoy < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.0.1/convoy_0.0.1_linux_amd64.tar.gz"
-        sha256 "43ce84c9642f47a2bb09632fff7d4ef3212897bf8c589163ac144bb5f34661b6"
+        sha256 "9b84906dfde0088cb1cd06936393d0adbc9ea44096d6b324b985a1fc398b2e40"
 
         def install
           bin.install "convoy"
@@ -41,7 +41,7 @@ class Convoy < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/0.0.1/convoy_0.0.1_linux_arm64.tar.gz"
-        sha256 "991f966adb0959c4a881949b40135245a601fa9ededf6d063274ba1c075e0246"
+        sha256 "b033d1af32519e764b014afc410a6aebfd1b43b17baea71ea75d3f6ff596a3ff"
 
         def install
           bin.install "convoy"
