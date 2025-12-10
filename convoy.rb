@@ -5,21 +5,21 @@
 class Convoy < Formula
   desc "A fast & secure open source webhooks service"
   homepage "https://getconvoy.io/"
-  version "25.12.7"
+  version "25.12.8"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.7/convoy_25.12.7_darwin_amd64.tar.gz"
-      sha256 "e930347539ab5bda600187153f3128100cb0f6584a4d90ca4b8bc690eae69329"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.8/convoy_25.12.8_darwin_amd64.tar.gz"
+      sha256 "888e990e74b517d582c70bacc1bb6438667066ef45e7768be183daf07b5e0e7d"
 
       def install
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.7/convoy_25.12.7_darwin_arm64.tar.gz"
-      sha256 "0baa0c8fc4df98ee1a1b0329ef53c0e597b2c9c01ddac69bcabb2c9917574405"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.8/convoy_25.12.8_darwin_arm64.tar.gz"
+      sha256 "b31d4bd5f0b2de67da5aa984b511113d74a70e39afb9cb48e8994dc8ac16466f"
 
       def install
         bin.install "convoy"
@@ -29,15 +29,15 @@ class Convoy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.7/convoy_25.12.7_linux_amd64.tar.gz"
-      sha256 "5852be8ad4095cd554f31bfd6475177ba41f3094f7ffd1f230ded0e9616e910b"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.8/convoy_25.12.8_linux_amd64.tar.gz"
+      sha256 "6816cfde6e5f3cc3534a9c30db7bd9f88992c8f415123c9d0a7d08913d7ae3a6"
       def install
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.7/convoy_25.12.7_linux_arm64.tar.gz"
-      sha256 "3e23dcade87fffde880c92c5dd45f3873d3d04b41f46dd1ac73fe6c0c1eb9711"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/25.12.8/convoy_25.12.8_linux_arm64.tar.gz"
+      sha256 "75634f1ac2a9dc11e8d7fab0240241e08260e41514c60eeeea4b3dd70f5d48d7"
       def install
         bin.install "convoy"
       end
