@@ -5,23 +5,23 @@
 class Convoy < Formula
   desc "A fast & secure open source webhooks service"
   homepage "https://getconvoy.io/"
-  version "26.1.4"
+  version "26.1.5"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.4/convoy_26.1.4_darwin_amd64.tar.gz"
-      sha256 "6f55f8020ed7076f55f15ad55a47a63bdb8abe44b52c2f350e7553f2654900d3"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.5/convoy_26.1.5_darwin_amd64.tar.gz"
+      sha256 "3f3cd8a5ff4f54dfc6f20134d7eb109a8bc95c53255c58c6d2262d32bd07f10a"
 
-      def install
+      define_method(:install) do
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.4/convoy_26.1.4_darwin_arm64.tar.gz"
-      sha256 "60a91b15c6221904b76a2006076410f3a71b84d20b1906ee630f0741d41af6df"
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.5/convoy_26.1.5_darwin_arm64.tar.gz"
+      sha256 "19d9944496af653b53697bdbca8115c9b8fb8d797b2343b969cb495f2e668a69"
 
-      def install
+      define_method(:install) do
         bin.install "convoy"
       end
     end
@@ -29,16 +29,16 @@ class Convoy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.4/convoy_26.1.4_linux_amd64.tar.gz"
-      sha256 "a23d098e01ce8cd31df14291035c6ae949d4f37224ec906212d36d424883fb74"
-      def install
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.5/convoy_26.1.5_linux_amd64.tar.gz"
+      sha256 "606373499cb6337972041555e16577fa0e2b6ca7b68f33a150408e3143a122b7"
+      define_method(:install) do
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.4/convoy_26.1.4_linux_arm64.tar.gz"
-      sha256 "1e1d5592ad73d7bbd145415ac8144f5b423cdef6975f29db05dada28eff6d7fd"
-      def install
+      url "https://dl.cloudsmith.io/public/convoy/convoy/raw/versions/26.1.5/convoy_26.1.5_linux_arm64.tar.gz"
+      sha256 "ed49259e282985f6d30fc2b18e93f9c8dd94502da656067df0006bf7297b3bc4"
+      define_method(:install) do
         bin.install "convoy"
       end
     end
