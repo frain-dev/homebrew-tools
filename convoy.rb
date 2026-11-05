@@ -5,21 +5,21 @@
 class Convoy < Formula
   desc "A fast & secure open source webhooks service"
   homepage "https://getconvoy.io/"
-  version "26.9.2"
+  version "26.9.3"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/frain-dev/convoy/releases/download/v26.9.2/convoy_26.9.2_darwin_amd64.tar.gz"
-      sha256 "1dec6b93b26ec2b694334d3aa40d144088ecd3d874a6775edad4f2452d19014f"
+      url "https://github.com/frain-dev/convoy/releases/download/v26.9.3/convoy_26.9.3_darwin_amd64.tar.gz"
+      sha256 "498b14a55c8bbbffa3c85a265ab92e71bc215bcf2e490a076ca26025e33bf021"
 
       define_method(:install) do
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/frain-dev/convoy/releases/download/v26.9.2/convoy_26.9.2_darwin_arm64.tar.gz"
-      sha256 "757e0ab2053b1bd33b939379287a697ce65aad044b18892cd36da8f53b6b9f13"
+      url "https://github.com/frain-dev/convoy/releases/download/v26.9.3/convoy_26.9.3_darwin_arm64.tar.gz"
+      sha256 "bffde6456e3e43d969cfbe59e06e6c4edaa76802663cfdce35db0500f1f43555"
 
       define_method(:install) do
         bin.install "convoy"
@@ -29,15 +29,15 @@ class Convoy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/frain-dev/convoy/releases/download/v26.9.2/convoy_26.9.2_linux_amd64.tar.gz"
-      sha256 "fd2bf73569f4e4417c24f73607652cd98982a5fc960de5abfd46df1e9026abda"
+      url "https://github.com/frain-dev/convoy/releases/download/v26.9.3/convoy_26.9.3_linux_amd64.tar.gz"
+      sha256 "a6e62d3088dc24128ff14da172ea3183f239c367335b963fc89ac2b90597e0ee"
       define_method(:install) do
         bin.install "convoy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/frain-dev/convoy/releases/download/v26.9.2/convoy_26.9.2_linux_arm64.tar.gz"
-      sha256 "43c829be5e7ea2b9a502e2c335a46a11b3e47d825d7bf2448cba94a5e163f77d"
+      url "https://github.com/frain-dev/convoy/releases/download/v26.9.3/convoy_26.9.3_linux_arm64.tar.gz"
+      sha256 "44c8eaebcb493649a62e86ac98e8a2e86950a53703d6a5e399280eb0c6be87e1"
       define_method(:install) do
         bin.install "convoy"
       end
